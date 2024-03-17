@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    build:
+      context: postgres/
+      dockerfile: Dockerfile
+      args:
+        PG_VERSION: $PG_VERSION
+        PG_DATABASE: $PG_DATABASE
+        PG_USER: $PG_USER
+        PG_PASSWORD: $PG_PASSWORD
+    container_name: ex-db-postgresql
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
