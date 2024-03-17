@@ -6,11 +6,11 @@ public class VoucherFilter : FilterBase
 {
     public string? VoucherCode { get; set; }
 
+    public string? AdminId { get; set; }
+
     public int? Sale { get; set; }
 
     public int? Quantity { get; set; }
-
-    public int? AdminId { get; set; }
 
     public int? Status { get; set; }
 }
